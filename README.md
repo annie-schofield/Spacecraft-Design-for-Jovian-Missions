@@ -92,7 +92,12 @@ This thickness represents the minimum material required to stop an electron of e
 
 ## Results
 
-As an example, the 30 day period starting 02/02/2026 has been used, with the initial orbital parameters: altitude 1km; eccentricity, argument of periapsis, longitude of ascending node and true anomaly of 0; inclination of 90 degrees. The max hazardous energy detected was 20.0 MeV, meaning the raw required thickness would be 38.87 mm. The recommended thickness (with a 20% Safety Margin) would be 46.64 mm. The following plot was produced: 
+As an example, the 30 day period starting 02/02/2026 has been used, with the following initial orbital parameters: 
+* Altitude: 1km
+* Eccentricity, argument of periapsis, longitude of ascending node and true anomaly: zero
+* Inclination: 90 degrees
+
+The max hazardous energy detected was _20.0 MeV_, meaning the raw required thickness would be _38.87 mm_. The recommended thickness (with a 20% Safety Margin) would be _46.64 mm_. The following plot was produced: 
 
 ![Example shielding plot](EXAMPLE_shielding_plot.png)
 
