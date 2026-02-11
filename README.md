@@ -9,6 +9,7 @@ This project simulates a spacecraft mission to Ganymede to characterise the hars
 * Simulate a stable polar orbit around Ganymede using **Tudat**.
 * Characterize the electron radiation fluence using **SPENVIS (JOSE model)**.
 * Calculate the required shielding mass using **Weber’s Range-Energy approximation**.
+* Test shield thickness using **SPENVIS Geant4 MULASSIS** tool. 
 
 ### 2. Workflow & Methodology
 
@@ -97,9 +98,15 @@ As an example, the 30 day period starting 02/02/2026 has been used, with the fol
 * Eccentricity, argument of periapsis, longitude of ascending node and true anomaly: zero
 * Inclination: 90 degrees
 
-The max hazardous energy detected was _20.0 MeV_, meaning the raw required thickness would be _38.87 mm_. The recommended thickness (with a 20% Safety Margin) would be _46.64 mm_. The following plot was produced: 
+The max hazardous energy detected was _20.0 MeV_, meaning the raw required thickness would be _38.87 mm_. The recommended thickness (with a 20% safety margin) would be _46.64 mm_. The following plot was produced: 
 
 ![Example shielding plot](EXAMPLE_shielding_plot.png)
+
+Using the MULASSIS tool Geant4 simulation on SPENVIS with this thickness gives the following graphs, you can clearly see that the aluminium reduces the electron fluence to 0. However, while the lower energy gamma rays are absorbed by this thickness of aluminium, high energy gamma radiation is not stopped, and Bremsstrahlung radiation is produced.
+
+![MULASSIS graphs](MULASSIS_graphs.png)
+
+We are going to need more layers to stop this gamma radiation... so the next step is a composite shield!
 
 ## References
 
